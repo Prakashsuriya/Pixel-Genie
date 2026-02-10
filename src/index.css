@@ -11,19 +11,83 @@ body {
 }
 
 /* Headings use Syne - bold and distinctive */
-h1, h2, h3, h4, h5, h6,
-.display-1, .display-2, .display-3, .display-4, .display-5, .display-6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.display-1,
+.display-2,
+.display-3,
+.display-4,
+.display-5,
+.display-6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
   font-family: 'Syne', sans-serif !important;
 }
 
 /* Body text uses Outfit - clean and readable */
-p, span, a, li, label, input, textarea, button, div,
-.lead, .text-secondary, .small, .fw-bold {
+p,
+span,
+a,
+li,
+label,
+input,
+textarea,
+button,
+div,
+.lead,
+.text-secondary,
+.small,
+.fw-bold {
   font-family: 'Outfit', sans-serif;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Responsive Service Hero Padding */
+.service-hero-padding {
+  padding: 120px 0 80px !important;
+  /* Desktop alignment */
+}
+
+/* Responsive Header Sizing */
+.header-pill {
+  height: 75px;
+}
+
+.header-logo {
+  height: 50px;
+}
+
+@media (max-width: 991px) {
+  .service-hero-padding {
+    padding: 260px 0 80px !important;
+    /* Increased to 260px to fully clear navbar */
+  }
+
+  .header-pill {
+    height: 60px;
+    /* Smaller navbar on mobile */
+  }
+
+  .header-logo {
+    height: 40px;
+    /* Smaller logo on mobile */
+  }
+}
+
+/* Mask Gradient for Clients Marquee */
+.mask-gradient {
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }

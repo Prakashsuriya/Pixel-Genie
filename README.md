@@ -104,7 +104,6 @@ To create an optimized production bundle:
 ```bash
 npm run build
 ```
-
 The output will be in the `build/` folder, ready for deployment.
 
 ## 📄 Available Scripts

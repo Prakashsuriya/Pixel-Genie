@@ -50,9 +50,9 @@ const Header = () => {
     return (
         <React.Fragment>
             {/* Header Wrapper: Centers the unified pill at the top */}
-            <div className="position-absolute w-100 d-flex justify-content-center p-4" style={{ zIndex: 1000, pointerEvents: 'none', top: 0 }}>
+            <div className="position-absolute w-100 d-flex justify-content-center p-2 p-md-4" style={{ zIndex: 1000, pointerEvents: 'none', top: 0 }}>
                 <motion.header
-                    className="d-flex align-items-center justify-content-between px-5 py-3 rounded-pill"
+                    className="d-flex align-items-center justify-content-between px-3 px-md-5 py-2 py-md-3 rounded-pill header-pill"
                     initial={{ y: -100, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.6, type: 'spring' }}
@@ -64,18 +64,17 @@ const Header = () => {
                         backdropFilter: 'blur(12px)',
                         border: '1px solid rgba(255, 255, 255, 0.1)',
                         boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.3)',
-                        height: '75px', // Fixed height to ensure centering logic works reliably
                         position: 'relative' // Ensure relative context for absolute children
                     }}
                 >
                     {/* 1. Left: Logo Area */}
-                    <div className="logo-area d-flex align-items-center ms-3">
+                    <div className="logo-area d-flex align-items-center ms-0 ms-md-3">
                         <Link to="/" className="d-block text-decoration-none">
                             <img
                                 src="/images/PixelGenie Logo- 1.png"
                                 alt="Pixel Genie"
+                                className="header-logo"
                                 style={{
-                                    height: '50px',
                                     filter: 'none' // Original color
                                 }}
                             />
@@ -145,7 +144,7 @@ const Header = () => {
                     </div>
 
                     {/* Mobile Toggle */}
-                    <div className="d-lg-none ms-auto" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} style={{ cursor: 'pointer', zIndex: 1001 }}>
+                    <div className="d-lg-none ms-auto mt-3" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} style={{ cursor: 'pointer', zIndex: 1001 }}>
                         <i className={`fa ${isMobileMenuOpen ? 'fa-times' : 'fa-bars'} fa-2x`} style={{ color: 'var(--text-main)' }}></i>
                     </div>
                 </motion.header>

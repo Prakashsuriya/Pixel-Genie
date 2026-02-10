@@ -86,13 +86,7 @@ const Clients = () => {
                 </motion.div>
             </div>
 
-            {/* Reuse Marquee Mask */}
-            <style jsx>{`
-                .mask-gradient {
-                    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-                    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-                }
-            `}</style>
+            {/* CSS moved to index.css */}
         </section>
     );
 };

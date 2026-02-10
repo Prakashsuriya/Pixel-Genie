@@ -38,12 +38,11 @@ const DigitalMarketing = () => {
             <motion.section
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                className="service-hero"
+                className="service-hero service-hero-padding"
                 style={{
                     backgroundImage: `url('/images/Digital%20Marketing.jpeg')`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
-                    padding: '120px 0 80px',
                     position: 'relative',
                     overflow: 'hidden'
                 }}
