@@ -86,7 +86,7 @@ const Footer = () => {
                             <a href="mailto:pixelgeniestudio@gmail.com" className="h3 text-decoration-none border-bottom border-secondary d-inline-block pb-1" style={{ width: 'fit-content', color: 'var(--text-main)' }}>
                                 pixelgeniestudio@gmail.com
                             </a>
-                            <a href="tel:+918553322586" className="h4 text-secondary text-decoration-none">
+                            <a href="tel:+918553322586" className="h3 text-decoration-none border-bottom border-secondary d-inline-block pb-1" style={{ width: 'fit-content', color: 'var(--text-main)' }}>
                                 +91 85533 22586
                             </a>
                             <address className="text-secondary mt-3 fst-normal">
