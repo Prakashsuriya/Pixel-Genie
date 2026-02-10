@@ -50,7 +50,7 @@ const Hero = () => {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.6, duration: 0.5 }}
                 >
-                    <a href="#about" className="btn-premium">
+                    <a href="#services" className="btn-premium">
                         Explore Our Work
                     </a>
                 </motion.div>
