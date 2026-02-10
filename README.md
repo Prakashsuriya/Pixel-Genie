@@ -1,70 +1,127 @@
-# Getting Started with Create React App
+# Pixel Genie – Creative Agency Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive website for **Pixel Genie**, a full-service creative agency based in Bangalore. Built with React and designed with premium aesthetics including smooth animations, dark theme, and interactive UI elements.
 
-## Available Scripts
+## 🌐 About the Project
 
-In the project directory, you can run:
+Pixel Genie is a creative studio offering services ranging from video production and branding to digital marketing and corporate gifting. This website serves as the agency's online presence, showcasing their services, portfolio, client testimonials, and contact information.
 
-### `npm start`
+### Key Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Animated Hero Section** – Full-screen video background with dynamic text animations
+- **Service Pages** – 6 dedicated service pages with full-size hero background images
+- **Client Showcase** – Infinite marquee carousel displaying trusted client logos
+- **Testimonials** – Client testimonials with smooth scroll animations
+- **Industries Section** – Grid layout highlighting industries served
+- **Contact Form** – Integrated with [FormSubmit](https://formsubmit.co/) for email delivery
+- **WhatsApp & Call CTA** – Quick-access buttons in the navbar
+- **Responsive Design** – Fully optimized for desktop, tablet, and mobile
+- **Smooth Animations** – Page transitions and scroll-triggered animations via Framer Motion
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠 Tech Stack
 
-### `npm test`
+| Technology | Purpose |
+|---|---|
+| **React 19** | UI framework |
+| **React Router DOM 7** | Client-side routing |
+| **Framer Motion 12** | Animations & transitions |
+| **Bootstrap 5** | Responsive grid & utility classes |
+| **React Bootstrap** | Bootstrap components for React |
+| **Font Awesome 7** | Icons (social media, UI elements) |
+| **React Icons** | Additional icon library |
+| **FormSubmit** | Contact form email delivery (no backend needed) |
+| **Google Fonts** | Typography (Outfit, Syne) |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📁 Project Structure
 
-### `npm run build`
+```
+pixel-genie-react/
+├── public/
+│   ├── images/                  # All media assets (images, videos)
+│   │   ├── clients/             # Client logo images
+│   │   └── ...                  # Service & portfolio media
+│   └── index.html               # HTML entry point
+├── src/
+│   ├── components/
+│   │   ├── layout/              # Shared layout components
+│   │   │   ├── Header.js        # Navigation bar with glass-pill design
+│   │   │   └── Footer.js        # Footer with contact form & social links
+│   │   ├── pages/               # Individual service pages
+│   │   │   ├── VideoProduction.js
+│   │   │   ├── Branding.js
+│   │   │   ├── DigitalMarketing.js
+│   │   │   ├── Website.js
+│   │   │   ├── CorporateGifts.js
+│   │   │   └── Advertising.js
+│   │   └── sections/            # Homepage sections
+│   │       ├── Hero.js          # Video hero banner
+│   │       ├── About.js         # About the agency
+│   │       ├── Services.js      # Services overview grid
+│   │       ├── Industries.js    # Industries served
+│   │       ├── Clients.js       # Client logo marquee
+│   │       ├── Testimonials.js  # Client testimonials
+│   │       └── Contact.js       # Contact section
+│   ├── css/                     # Stylesheets
+│   ├── App.js                   # Root component with routing
+│   └── index.js                 # App entry point
+└── package.json
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Node.js** (v16 or higher)
+- **npm** (v8 or higher)
 
-### `npm run eject`
+### Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. **Clone the repository**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   git clone https://github.com/Prakashsuriya/Pixel-Genie.git
+   cd pixel-genie-react
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. **Install dependencies**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   npm install
+   ```
 
-## Learn More
+3. **Start the development server**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```bash
+   npm start
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   The app will open at [http://localhost:3000](http://localhost:3000).
 
-### Code Splitting
+### Production Build
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+To create an optimized production bundle:
 
-### Analyzing the Bundle Size
+```bash
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The output will be in the `build/` folder, ready for deployment.
 
-### Making a Progressive Web App
+## 📄 Available Scripts
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+| Command | Description |
+|---|---|
+| `npm start` | Runs the dev server on port 3000 |
+| `npm run build` | Creates optimized production build |
+| `npm test` | Runs the test suite |
 
-### Advanced Configuration
+## 📬 Contact Form
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The contact form in the footer uses **FormSubmit** to send emails directly to `info@pixelgenie.in` — no backend server required. Submissions are delivered via AJAX with success/error feedback shown to the user.
 
-### Deployment
+## 📱 Social Links
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Instagram](https://www.instagram.com/pixelgenieoff)
+- [Facebook](https://www.facebook.com/share/1BkoAV3XKs/)
+- [X (Twitter)](https://x.com/PixelGenieoff)
+- [LinkedIn](https://www.linkedin.com/company/109363312/)

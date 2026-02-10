@@ -1,10 +1,26 @@
+/* ===================================
+   Global Font Standardization
+   Using 2 fonts: Syne & Outfit
+====================================== */
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Outfit', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings use Syne - bold and distinctive */
+h1, h2, h3, h4, h5, h6,
+.display-1, .display-2, .display-3, .display-4, .display-5, .display-6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'Syne', sans-serif !important;
+}
+
+/* Body text uses Outfit - clean and readable */
+p, span, a, li, label, input, textarea, button, div,
+.lead, .text-secondary, .small, .fw-bold {
+  font-family: 'Outfit', sans-serif;
 }
 
 code {

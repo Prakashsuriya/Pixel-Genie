@@ -1,0 +1,336 @@
+/* Modern Cyberpunk Neon Theme */
+:root {
+    /* Primary Colors */
+    --theme-color: #00F5FF;
+    --theme-rgb: 0, 245, 255;
+    --theme-secondary: #FF00E5;
+    --theme-tertiary: #FFD700;
+
+    /* Gradients */
+    --theme-gradient: linear-gradient(135deg, #00F5FF 0%, #FF00E5 50%, #FFD700 100%);
+    --theme-gradient-vertical: linear-gradient(180deg, #00F5FF 0%, #FF00E5 100%);
+    --theme-gradient-radial: radial-gradient(circle at center, #00F5FF 0%, #FF00E5 50%, #FFD700 100%);
+
+    /* Dark Backgrounds */
+    --bg-dark: #0A0E1A;
+    --bg-card: #131829;
+    --bg-card-hover: #1a1f3a;
+
+    /* Sophisticated Dark Mesh Gradient */
+    --bg-light: radial-gradient(at 10% 20%, rgba(0, 245, 255, 0.15) 0, transparent 40%),
+        radial-gradient(at 90% 10%, rgba(255, 0, 229, 0.12) 0, transparent 45%),
+        radial-gradient(at 70% 80%, rgba(255, 215, 0, 0.08) 0, transparent 50%),
+        radial-gradient(at 20% 90%, rgba(0, 245, 255, 0.1) 0, transparent 40%),
+        #0A0E1A;
+
+    /* Text Colors */
+    --bg-white: #ffffff;
+    --text-main: #E8E8E8;
+    --text-secondary: #A8A8A8;
+    --text-on-bg: #ffffff;
+    --text-dark: #0A0E1A;
+
+    /* Accent & Effects */
+    --glow-cyan: 0 0 20px rgba(0, 245, 255, 0.5);
+    --glow-magenta: 0 0 20px rgba(255, 0, 229, 0.5);
+    --glow-gold: 0 0 20px rgba(255, 215, 0, 0.5);
+    --card-border: rgba(0, 245, 255, 0.2);
+}
+
+html,
+body {
+    background: var(--bg-light) !important;
+    background-attachment: fixed !important;
+    /* Ensure gradient stays while scrolling */
+    background-size: 200% 200%;
+    /* Smooth blend */
+    color: var(--text-main);
+    font-family: 'Outfit', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Ensure no section has dark bg unnecessarily */
+section {
+    background-color: var(--bg-light);
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #e9ecef;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #adb5bd;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--theme-color);
+}
+
+/* Animations & Utilities */
+.mask-gradient {
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.text-accent-gradient {
+    background: var(--theme-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btn-premium {
+    background: transparent;
+    border: 2px solid rgba(0, 245, 255, 0.4);
+    color: var(--theme-color);
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-premium::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--theme-gradient);
+    transition: left 0.3s ease;
+    z-index: -1;
+}
+
+.btn-premium:hover {
+    background: var(--theme-color);
+    color: var(--text-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--glow-cyan);
+    border-color: var(--theme-color);
+}
+
+.btn-premium:hover::before {
+    left: 0;
+}
+
+.hover-scale-105:hover {
+    transform: scale(1.05);
+}
+
+.transition-transform {
+    transition: transform 0.3s ease;
+}
+
+.group-hover-arrow:hover .fa-arrow-right {
+    transform: translateX(5px);
+}
+
+/* Glassmorphism Utilities */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--card-border);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* ===================================
+    Premium Navbar Hover Effects
+====================================== */
+
+/* Base Navigation Link Styling */
+nav a {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Gradient Underline Effect */
+nav a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--theme-gradient);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+nav a:hover::before {
+    transform: scaleX(1);
+}
+
+/* Glow Effect on Hover */
+nav a::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0, 245, 255, 0.3) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    transition: width 0.5s ease, height 0.5s ease;
+    z-index: -1;
+    pointer-events: none;
+}
+
+nav a:hover::after {
+    width: 120%;
+    height: 120%;
+}
+
+/* Individual Link Specific Effects */
+/* Home - Pulse Glow */
+nav a[href*="home"]:hover {
+    text-shadow: 0 0 10px rgba(0, 245, 255, 0.6);
+    animation: pulse-glow 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+
+    0%,
+    100% {
+        text-shadow: 0 0 10px rgba(0, 245, 255, 0.6);
+    }
+
+    50% {
+        text-shadow: 0 0 20px rgba(0, 245, 255, 0.9), 0 0 30px rgba(0, 245, 255, 0.5);
+    }
+}
+
+/* About - Gradient Text Fill */
+nav a[href*="about"]:hover {
+    background: var(--theme-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% auto;
+    animation: gradient-shift 2s linear infinite;
+}
+
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
+}
+
+/* Services - Scale & Rotate */
+nav a[href*="services"]:hover {
+    transform: scale(1.1) rotate(2deg);
+    color: var(--theme-secondary);
+    text-shadow: 0 0 15px rgba(255, 0, 229, 0.7);
+}
+
+/* Contact - Slide Up Effect */
+nav a[href*="contact"]:hover {
+    animation: slide-up 0.3s ease forwards;
+    color: var(--theme-tertiary);
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Enhanced Background Effect for All Links */
+nav a:hover {
+    background-color: rgba(0, 245, 255, 0.08) !important;
+    border-radius: 50px;
+}
+
+/* Mobile Menu Link Hover Effects */
+.mobile-menu-overlay a:hover {
+    background: var(--theme-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+/* Smooth Transitions for All Navigation Elements */
+nav a,
+nav a::before,
+nav a::after {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Remove default outline on focus but keep accessibility */
+nav a:focus {
+    outline: 2px solid var(--theme-color);
+    outline-offset: 4px;
+}
+
+/* Letter Spacing Animation on Hover */
+@keyframes expand-letters {
+    to {
+        letter-spacing: 2px;
+    }
+}
+
+nav a:hover {
+    animation: expand-letters 0.3s forwards;
+}
+
+/* ===================================
+    Contact Form Input Styles
+====================================== */
+
+/* Ensure inputs are visible and have proper cursor */
+.contact-input {
+    color: #333 !important;
+    caret-color: var(--theme-color) !important;
+}
+
+.contact-input::placeholder {
+    color: #999 !important;
+    opacity: 1;
+}
+
+.contact-input:focus {
+    outline: none !important;
+    border-bottom-color: var(--theme-color) !important;
+    box-shadow: none !important;
+}
+
+/* Firefox placeholder fix */
+.contact-input::-moz-placeholder {
+    color: #999 !important;
+    opacity: 1;
+}
+
+/* Webkit autofill fix */
+.contact-input:-webkit-autofill,
+.contact-input:-webkit-autofill:hover,
+.contact-input:-webkit-autofill:focus {
+    -webkit-text-fill-color: #333 !important;
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
